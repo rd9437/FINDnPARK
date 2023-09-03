@@ -7,8 +7,8 @@ data = pd.read_csv('parkingdataset.csv')
 # Prediction function
 def predict_parking_probability(input_day, input_hour):
     if input_hour in data.columns and input_day in data['Day'].unique():
-        total_slots = data['Total Slots'][data['Day'] == input_day].values[0]
-        occupied = data[input_hour][data['Day'] == input_day].values[0]
+        total_slots = data['Total Slots'][data['Day'] == input_day].sum()
+        occupied = data[input_hour][data['Day'] == input_day].sum()
         
         if pd.isnull(total_slots) or pd.isnull(occupied):
             return f"At {input_hour}: No data available to calculate probability."
