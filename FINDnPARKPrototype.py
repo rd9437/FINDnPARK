@@ -35,7 +35,7 @@ st.title("FINDnPARK 1.0")
 app_style = """
 <style>
 body {
-    background-image: url('https://media.tenor.com/YTNlMeTVl2kAAAAC/car.gif'); 
+    background-image: url('https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-LWamoztjI1H7rn5R3L26A.png'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
