@@ -29,19 +29,24 @@ def predict_parking_probability(input_day, input_hour):
 
 import streamlit as st
 
-# Streamlit 
+import streamlit as st
+
+# Streamlit UI
 st.title("FINDnPARK 1.0")
 
-app_style = """
+# Define a CSS style for the app with the background image URL
+app_style = f"""
 <style>
-body {
-    background-image: url('https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-LWamoztjI1H7rn5R3L26A.png'); 
+body {{
+    background-image: url('https://miro.medium.com/v2/resize:fit:1100/format:webp/1*-LWamoztjI1H7rn5R3L26A.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+}}
 </style>
 """
+
+# Set the CSS style for the app
 st.markdown(app_style, unsafe_allow_html=True)
 
 input_day = st.text_input("Enter a day (e.g., Monday):")
@@ -50,3 +55,4 @@ input_hour = st.text_input("Enter the hour (e.g., 8AM - 8PM):")
 if st.button("Predict"):
     prediction = predict_parking_probability(input_day, input_hour)
     st.write(prediction)
+
