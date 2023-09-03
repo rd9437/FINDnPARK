@@ -27,8 +27,22 @@ def predict_parking_probability(input_day, input_hour):
     else:
         return "Invalid input. Please provide a valid day and time."
 
-# Streamlit UI
+import streamlit as st
+
+# Streamlit 
 st.title("FINDnPARK 1.0")
+
+app_style = """
+<style>
+body {
+    background-image: url('https://media.tenor.com/YTNlMeTVl2kAAAAC/car.gif'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+"""
+st.markdown(app_style, unsafe_allow_html=True)
 
 input_day = st.text_input("Enter a day (e.g., Monday):")
 input_hour = st.text_input("Enter the hour (e.g., 8AM - 8PM):")
