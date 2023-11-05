@@ -22,11 +22,11 @@ def predict_parking_probability(input_day, input_hour):
         else:
             result_sentence = "This is not a good hour to find a parking spot."
         
-        # Calculate expected available parking slots as a percentage of the total slots (218)
-        expected_available_percentage = (probability * 218)
+        # Calculate expected available parking slots as a percentage of the total slots (218) and round to the nearest integer
+        expected_available_percentage = int(probability * 218)
         
         prediction = f"Chances of getting a parking spot at {input_hour}: {probability:.2%}. {result_sentence}"
-        prediction += f" Expected available parking slots as a percentage of the total slots (218): {expected_available_percentage:.2f}%."
+        prediction += f" Expected available parking slots as a percentage of the total slots (218): {expected_available_percentage}%."
         return prediction
     else:
         return "Invalid input. Please provide a valid day and time."
