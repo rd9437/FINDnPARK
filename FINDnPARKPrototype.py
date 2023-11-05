@@ -15,10 +15,18 @@ def predict_parking_probability(input_day, input_hour):
         
         probability = 1 - (occupied / total_slots)
         
-        # Calculate the number of available slots as a percentage of total slots
-        available_slots = int(probability * total_slots)
+        if probability > 0.8:
+            result_sentence = "This is a good hour to find a parking spot."
+        elif probability > 0.5:
+            result_sentence = "This hour might have moderate occupancy."
+        else:
+            result_sentence = "This is not a good hour to find a parking spot."
         
-        prediction = f"At {input_hour}, you can expect approximately {available_slots} available parking slots out of {total_slots}."
+        # Calculate expected available slots
+        expected_available_slots = int(total_slots * probability)
+        
+        prediction = f"Chances of getting a parking spot at {input_hour}: {probability:.2%}. {result_sentence}"
+        prediction += f" Expected available parking slots: {expected_available_slots} out of {total_slots}."
         return prediction
     else:
         return "Invalid input. Please provide a valid day and time."
@@ -29,6 +37,6 @@ st.title("FINDnPARK 1.0")
 input_day = st.text_input("Enter a day (e.g., Monday):")
 input_hour = st.text_input("Enter the hour (e.g., 8AM - 8PM):")
 
-if st.button("Pret"):
+if st.button("Predict"):
     prediction = predict_parking_probability(input_day, input_hour)
     st.write(prediction)
