@@ -29,6 +29,6 @@ st.title("FINDnPARK 1.0")
 input_day = st.text_input("Enter a day (e.g., Monday):")
 input_hour = st.text_input("Enter the hour (e.g., 8AM - 8PM):")
 
-if st.button("Predict"):
+if st.button("Pret"):
     prediction = predict_parking_probability(input_day, input_hour)
     st.write(prediction)
