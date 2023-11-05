@@ -16,7 +16,7 @@ def predict_parking_slots(input_day, input_hour):
         available_slots = total_slots - occupied
                 
         slots = f"Chances of getting a parking spot at {input_hour}: {available_slots}"
-        return prediction
+        return slots
     else:
         return "Invalid input. Please provide a valid day and time."
 
