@@ -1,3 +1,6 @@
+import streamlit as st
+import pandas as pd
+
 # Load CSV data into a DataFrame
 data = pd.read_csv('parkingdataset.csv')
 
