@@ -16,7 +16,7 @@ def predict_parking_slots(input_day, input_hour):
         probability = 1 - (occupied / total_slots)
         
         # Calculate expected available parking slots as a percentage of the total slots (218) and round to the nearest integer
-        expected_available_slots = int(probability * 218)
+        expected_available_slots = int(probability * data['Total Slots'])
         
         return f"Expected available parking slots as a percentage of the total slots: {expected_available_slots} slots"
     else:
