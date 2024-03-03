@@ -23,7 +23,6 @@ def predict_parking_slots(input_day, input_hour):
 
 # Streamlit UI
 st.title("FINDnPARK 1.0")
-st.sidebar.write("This application is part of an ongoing project aimed at analyzing parking space availability using a dataset. Please note that this application is still under construction, and its predictions may not be accurate or reliable. Users are advised not to rely solely on the information provided by this application for their parking decisions. Thank you for your understanding.")
 
 input_day = st.text_input("Enter a day (e.g., Monday):")
 input_hour = st.text_input("Enter the hour (e.g., 8AM - 8PM):")
