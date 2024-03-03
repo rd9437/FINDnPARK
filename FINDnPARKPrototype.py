@@ -39,4 +39,4 @@ st.write("This application is part of an ongoing project aimed at analyzing park
 
 # Link
 st.write("\n")
-st.write("For more information, visit our project page [here](http:findnpak.rf.gd).")
+st.write("For more information, visit our project page [here](https://findnpark.rf.gd/index.html).")
