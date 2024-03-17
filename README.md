@@ -3,7 +3,7 @@ Predictive Parking Analysis
 
 https://findnpark.streamlit.app/
 
-Welcome to the Parking Space Availability Analyzer app! This application is part of an ongoing project aimed at analyzing parking space availability using a dataset. Please note that this application is still under construction, and its predictions may not be accurate or reliable. Users are advised not to rely solely on the information provided by this application for their parking decisions. Thank you for your understanding.
+Welcome to the Parking Space Availability Analyzer app! **This application is part of an ongoing project aimed at analyzing parking space availability using a dataset. Please note that this application is still under construction, and its predictions may not be accurate or reliable. Users are advised not to rely solely on the information provided by this application for their parking decisions. Thank you for your understanding.**
 
 **About**
 This app utilizes a dataset to predict parking space availability in various locations. It aims to provide users with insights into potential parking availability based on historical data and predictive models. However, it's important to note that the accuracy and reliability of these predictions may vary, as the application is still in development.
